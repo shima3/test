@@ -30,26 +30,11 @@ timezone: Japan
 </head>
 <body id="body">
     <canvas id="canvas" class="checker"
-            style="width:100%; height:100%;">
+            style="width:100%;">
     </canvas>
     Last update: {{ site.time }}
 </body>
 <script type="text/javascript">
-  var wrapper=document.getElementById("wrapper");
-  let canvas=document.getElementById("canvas");
-
-  function fitCanvas(){
-      canvas.width=wrapper.clientWidth;
-    /*
-      canvas.width=window.innerWidth;
-      canvas.height=window.innerHeight-wrapper.clientHeight;
-      canvas.height=window.innerHeight-upper.clientHeight;
-      canvas.width=upper.clientWidth;
-      canvas.height=body.clientHeight-upper.clientHeight;
-      */
-  };
-/*
-  fitCanvas();
-  window.onresize=fitCanvas;
-*/
+    let canvas=document.getElementById("canvas");
+    canvas.height=canvas.width;
 </script>
