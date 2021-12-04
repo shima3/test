@@ -3,8 +3,34 @@ layout: default
 food: pizza
 ---
 <head>
-  <title>Test</title>
+    <style>
+      @keyframes move{
+        from{
+          background-position: 0px 0px, 5px 5px;
+        }
+        to{
+          background-position: 30px 30px, 35px 35px;
+        }
+      }
+      .checker {
+        background-color: #fff;
+        background-image:
+          linear-gradient(45deg, #ccc 25%, transparent 25%,
+            transparent 75%, #ccc 75%, #ccc),
+          linear-gradient(45deg, #ccc 25%, transparent 25%,
+            transparent 75%, #ccc 75%, #ccc);
+        background-size: 10px 10px;
+        animation-name: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+    </style>
 </head>
 <body>
+        <div id="wrapper" style="width:100%; height:100%;">
+        <canvas id="canvas" class="checker"></canvas>
+      </div>
+
   Last update: {{ site.time }}
 </body>
