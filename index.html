@@ -28,7 +28,7 @@ timezone: Japan
       }
     </style>
 </head>
-<body>
+<body id="body">
     <div id="wrapper" style="width:100%; height:100%;">
         <canvas id="canvas" class="checker"></canvas>
     </div>
@@ -39,10 +39,10 @@ timezone: Japan
   let canvas=document.getElementById("canvas");
 
   function fitCanvas(){
-      canvas.width=window.innerWidth;
-      canvas.height=window.innerHeight-wrapper.clientHeight;
+      canvas.width=wrapper.clientWidth;
     /*
       canvas.width=window.innerWidth;
+      canvas.height=window.innerHeight-wrapper.clientHeight;
       canvas.height=window.innerHeight-upper.clientHeight;
       canvas.width=upper.clientWidth;
       canvas.height=body.clientHeight-upper.clientHeight;
