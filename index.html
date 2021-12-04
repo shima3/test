@@ -1,6 +1,7 @@
 ---
 layout: default
 food: pizza
+timezone: Japan
 ---
 <head>
     <style>
@@ -28,9 +29,26 @@ food: pizza
     </style>
 </head>
 <body>
-        <div id="wrapper" style="width:100%; height:100%;">
+    <div id="wrapper" style="width:100%; height:100%;">
         <canvas id="canvas" class="checker"></canvas>
-      </div>
-
+    </div>
   Last update: {{ site.time }}
 </body>
+<script type="text/javascript">
+  var wrapper=document.getElementById("wrapper");
+  let canvas=document.getElementById("canvas");
+
+  function fitCanvas(){
+      canvas.width=window.innerWidth;
+      canvas.height=window.innerHeight-wrapper.clientHeight;
+    /*
+      canvas.width=window.innerWidth;
+      canvas.height=window.innerHeight-upper.clientHeight;
+      canvas.width=upper.clientWidth;
+      canvas.height=body.clientHeight-upper.clientHeight;
+      */
+  };
+
+  fitCanvas();
+  window.onresize=fitCanvas;
+</script>
