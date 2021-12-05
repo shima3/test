@@ -43,6 +43,9 @@ layout: default
 //        border-bottom: 1px solid #ccc;
 //        padding-left: 1em;
       }
+      dt:after {
+        content: ": ";
+      }
       dd {
         display: inline;
 //        margin-left: 80px;
@@ -61,8 +64,8 @@ layout: default
     <canvas id="canvas" class="checker"
             style="width:100%;"></canvas>
     <dl>
-        <div><dt>a:</dt><dd>A<br>C</dd></div>
-        <div><dt>bcd:</dt><dd>B</dd></div>
+        <div><dt>a</dt><dd>A<br>C</dd></div>
+        <div><dt>bcd</dt><dd>B</dd></div>
     </dl>
     Last update: {{ site.time }}
     Timezone: {{ site.timezone }}
